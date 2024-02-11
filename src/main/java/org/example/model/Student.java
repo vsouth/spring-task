@@ -20,11 +20,11 @@ public class Student {
 
     @PostConstruct
     public void init() {
-        Integer gradeSum = 0;
-        for (Integer grade : grades.values()) {
-            gradeSum += grade;
-        }
-        setEnrolled((gradeSum / grades.size()) >= 3);
+        double averageGrade = grades.values().stream()
+                .mapToDouble(Integer::doubleValue)
+                .average()
+                .orElse(0.0);
+        setEnrolled(averageGrade >= 3.0);
     }
 
     public String getFirstName() {
