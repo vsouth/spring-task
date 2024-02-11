@@ -13,14 +13,14 @@ import java.util.Map;
 @ComponentScan("org.example.model")
 public class Context {
     @Bean
-    public Student studentJill() {
+    public Student studentJil() {
         Map<Subject, Integer> grades = new HashMap<>();
 
         grades.put(Subject.ENGLISH, 2);
         grades.put(Subject.MATH, 2);
         grades.put(Subject.COMPUTER_SCIENCE, 2);
 
-        return new Student("Jill", "Green", grades);
+        return new Student("Jil", "Green", grades);
     }
 
     @Bean

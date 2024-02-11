@@ -8,8 +8,8 @@
 
     <context:component-scan base-package="org.example.model"/>
 
-    <bean id="studentJill" class="org.example.model.Student">
-        <constructor-arg name="firstName" value="Jill"/>
+    <bean id="studentJil" class="org.example.model.Student">
+        <constructor-arg name="firstName" value="Jil"/>
         <constructor-arg name="lastName" value="Green"/>
         <constructor-arg name="grades">
             <map>
@@ -48,4 +48,6 @@
         <property name="firstName" value="Ivan"/>
         <property name="lastName" value="I"/>
     </bean>
+
+    <bean class="org.example.config.JillBeanPostProcessor"/>
 </beans>
