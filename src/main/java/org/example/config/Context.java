@@ -40,4 +40,8 @@ public class Context {
         grades.put(Subject.MATH, 5);
         return new Student("Bob", "Builder", grades);
     }
+    @Bean
+    public static JillBeanPostProcessor jillBeanPostProcessorBean() {
+        return new JillBeanPostProcessor();
+    }
 }
