@@ -14,7 +14,7 @@ public class Main {
         Professor professorXml = (Professor) contextXml.getBean("professorBean");
         Professor professorJava = (Professor) contextJava.getBean("professorBean");
 
-        System.out.println(professorXml);
-        System.out.println(professorJava);
+        System.out.printf("Professor from XML context:%n%s%n", professorXml);
+        System.out.printf("Professor from java context:%n%s%n", professorJava);
     }
 }
