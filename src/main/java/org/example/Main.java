@@ -11,8 +11,8 @@ public class Main {
         ApplicationContext contextXml = new ClassPathXmlApplicationContext("context.xml");
         ApplicationContext contextJava = new AnnotationConfigApplicationContext(Context.class);
 
-        Professor professorXml = (Professor) contextXml.getBean("professorBean");
-        Professor professorJava = (Professor) contextJava.getBean("professorBean");
+        Professor professorXml = (Professor) contextXml.getBean("professorBean", Professor.class);
+        Professor professorJava = (Professor) contextJava.getBean("professorBean", Professor.class);
 
         System.out.printf("Professor from XML context:%n%s%n", professorXml);
         System.out.printf("Professor from java context:%n%s%n", professorJava);
